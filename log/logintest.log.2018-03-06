@@ -1,0 +1,2634 @@
+2018-03-02 12:33:43,113 - framework - INFO - Weather Data Requests
+2018-03-02 12:33:56,333 - framework - INFO - Username and password combination is invalid
+2018-03-02 13:34:46,599 - framework - INFO - Weather Data Requests
+2018-03-02 13:34:59,690 - framework - INFO - Username and password combination is invalid
+2018-03-02 14:54:37,349 - framework - INFO - Weather Data Requests
+2018-03-02 14:54:49,670 - framework - INFO - Username and password combination is invalid
+2018-03-02 15:01:11,729 - framework - INFO - Weather Data Requests
+2018-03-02 15:01:23,877 - framework - INFO - Username and password combination is invalid
+2018-03-02 15:09:42,620 - framework - INFO - Weather Data Requests
+2018-03-02 15:09:54,485 - framework - INFO - Username and password combination is invalid
+2018-03-02 15:11:49,536 - framework - INFO - Weather Data Requests
+2018-03-02 15:12:01,135 - framework - INFO - Username and password combination is invalid
+2018-03-02 15:20:32,142 - framework - INFO - Weather Data Requests
+2018-03-02 15:20:43,750 - framework - INFO - Username and password combination is invalid
+2018-03-02 15:21:35,284 - framework - INFO - Weather Data Requests
+2018-03-02 15:21:48,378 - framework - INFO - Username and password combination is invalid
+2018-03-02 15:26:22,455 - framework - INFO - Weather Data Requests
+2018-03-02 15:26:33,911 - framework - INFO - Username and password combination is invalid
+2018-03-02 16:38:51,480 - framework - INFO - Weather Data Requests
+2018-03-02 16:39:03,022 - framework - INFO - Username and password combination is invalid
+2018-03-02 20:47:12,616 - framework - INFO - Weather Data Requests
+2018-03-02 20:48:20,343 - framework - INFO - Username and password combination is invalid
+2018-03-02 21:27:37,120 - framework - INFO - Weather Data Requests
+2018-03-02 21:28:46,480 - framework - INFO - Username and password combination is invalid
+2018-03-02 21:46:56,962 - framework - DEBUG - GET https://eks-qa.agspan.com/thirdparty
+2018-03-02 21:46:56,963 - framework - DEBUG - 请求成功：<Response [200]>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 21:46:56,964 - framework - DEBUG - 
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 21:48:37,536 - framework - DEBUG - GET https://eks-qa.agspan.com/thirdparty
+2018-03-02 21:48:37,537 - framework - DEBUG - 请求成功：<Response [200]>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 21:48:37,539 - framework - DEBUG - 
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 21:51:02,877 - framework - DEBUG - GET https://eks-qa.agspan.com/thirdparty
+2018-03-02 21:51:02,878 - framework - DEBUG - 请求成功：<Response [200]>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 21:51:02,880 - framework - DEBUG - 
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 21:54:20,761 - framework - DEBUG - GET https://eks-qa.agspan.com/thirdparty
+2018-03-02 21:54:20,762 - framework - DEBUG - 请求成功：<Response [200]>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 21:54:20,764 - framework - DEBUG - 
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 22:01:51,311 - framework - DEBUG - GET https://eks-qa.agspan.com/thirdparty
+2018-03-02 22:01:51,313 - framework - DEBUG - 请求成功：<Response [200]>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 22:01:51,314 - framework - DEBUG - 
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 22:02:41,039 - framework - DEBUG - GET https://eks-qa.agspan.com/thirdparty
+2018-03-02 22:02:41,041 - framework - DEBUG - 请求成功：<Response [200]>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-02 22:03:37,184 - framework - DEBUG - GET https://eks-qa.agspan.com/thirdparty
+2018-03-02 22:03:37,186 - framework - DEBUG - 请求成功：<Response [200]>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login - ThirdParty</title>
+    
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0"/>
+<meta name="robots" content="noarchive" />
+<meta name="googlebot" content="noarchive" />
+
+    <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="Bookmark" type="image/ico" href="/favicon.ico?v=201803020556" />
+<link rel="icon" type="image/ico" href="/favicon.ico?v=201803020556" />
+
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/logon_base.css?v=201803020556"  />
+    <link rel="stylesheet" type="text/css" href="/_assets/CSS/thirdparty_logon.css?v=201803020556"  />
+
+    <script type="text/javascript" src="/_assets/JavaScript/jquery-3.1.1.min.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/encryptHelper.js?v=201803020556"></script>
+    <script type="text/javascript" src="/_assets/JavaScript/FBABase.js?v=201803020556"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("label").click(function () {
+                $(this).next("input").focus();
+            });
+            if ($("#logonUser_UserName").val() != "") {
+                $("#logonUser_UserName").prev("label").hide(100);
+            }
+            $("#logonUser_UserName").keyup(function () {
+                if ($("#logonUser_UserName").val() != "") {
+                    $("#logonUser_UserName").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+            });
+            $("#logonUser_UserName").blur(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    $("#logonUser_UserName").prev("label").show(100);
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                }
+                if ($("#logonUser_UserName").val() != "" && $("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+            $("#logonUser_UserName").change(function () {
+                if ($("#logonUser_UserName").val() == "") {
+                    //                    $("#logonUser_Password").prev("label").show(100);
+                } else {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+
+            });
+            $("#logonUser_Password").keyup(function () {
+                if ($("#logonUser_Password").val() != "") {
+                    $("#logonUser_Password").prev("label").hide(100);
+                }
+                if ($("#logonUser_Password").val() == "") {
+                    $("#logonUser_Password").prev("label").show(100);
+                }
+            });
+
+            FBABase.setCookieNotify("IsCookieBannerThirdParty");
+        });
+
+    </script>
+</head>
+<body>
+    <div class="cookie_description">
+        <p>Please be aware that this website relies on the use of cookies to function correctly and involves some cookies being downloaded onto your device. By continuing to use this website, you agree to our use of these cookies. This helps us to improve the content of the website so that it is more useful and relevant to you. For more information please see our <a href="http://fm.elanco.com/elanco_eks_privacy.html">Privacy and Cookies Policy</a>.</p>
+        <div class="icon_close" style="width: 24px">
+            <img src="../_assets/Icon/icon_close.png" width="24px" alt="" title="close" /></div>
+    </div>
+    <form method="post" action="./ThirdPartyLogon.aspx?source=%2fthirdparty" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwODkwNTQ2OTIPFgIeCEhvbWVQYWdlBQsvdGhpcmRwYXJ0eRYCZg9kFgICAQ9kFgJmD2QWBgILDxYCHgRocmVmBSxodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3ByaXZhY3kuaHRtbGQCDQ8WAh8BBShodHRwOi8vZm0uZWxhbmNvLmNvbS9lbGFuY29fZWtzX3Rvcy5odG1sZAIPDxYCHwEFL2h0dHA6Ly9mbS5lbGFuY28uY29tL2VsYW5jb19la3NfY29udGFjdF91cy5odG1sZGQLRVu+qyEXI7R7sggCgMmvOhbVMHJ3shosiykr5y4Uwg==" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+FBABase.changePageforFirstLevel();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6105C586" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAV1bsj/po26PX7+CKBiEJFwBonfLyOgI9laWMTVQcHw1zcWtV4UmzuzABh39kF5YHCgU0ajuxhAKUeo+ImOYdQWHuG1rBlRASZ4z6xXv+whzZP0fUbMQCoy6g0VbbW8Irk8549ko7u5OYTYrGjX6iSI" />
+        <div class="wrap">
+            <img src="../_assets/Images/thirdparty_bg_main.png" width="100%" height="100%">
+        </div>
+        <div class="main" style="position: static">
+            <div class="login_wrap login_wrap_thirdparty">
+                <table id="logonUser" cellspacing="0" cellpadding="0" width="100%" style="position: relative;">
+	<tr>
+		<td>
+                        <h1>PLEASE LOGIN</h1>
+                        <p>
+                            <input name="logonUser$UserName" type="text" id="logonUser_UserName" tabindex="1" class="text_1" placeholder="USERNAME" />
+                        </p>
+                        <p>
+                            <input name="logonUser$Password" type="password" id="logonUser_Password" tabindex="2" class="text_1" placeholder="PASSWORD" />
+                            <a href="javascript:void(0);" id="logonUser_lnkForgotPwd" class="logbtn" data-toggle="show-modal-forgot-password">Forgot Password?</a>
+                        </p>
+                        <p class="ErrorTip">
+                            
+                        </p>
+                        <div class="btn">
+                            <input type="submit" name="logonUser$LoginButton" value="LOGIN" id="logonUser_LoginButton" class="btn_1" onFocus="this.blur();" />
+                        </div>
+                        <div class="info">
+                            <a href="http://fm.elanco.com/elanco_eks_privacy.html" id="logonUser_lnkPrivacyPolicyUrl" target="_blank">Privacy Policy</a>
+                            <a href="http://fm.elanco.com/elanco_eks_tos.html" id="logonUser_lnkTermsofUseUrl" target="_blank">Terms of Use</a> 
+                            <a href="http://fm.elanco.com/elanco_eks_contact_us.html" id="logonUser_lnkContactUsUrl" target="_blank">Contact Us</a>
+                        </div>
+                    </td>
+	</tr>
+</table>
+            </div>
+        </div>
+        <div class="modal-wrap modal-wrap-thirdparty">
+            <div class="modal-wrap-dialog">
+                <div class="modal-wrap-content">
+                    <iframe src="about:blank" id="iframeModal" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" data-tool="ThirdParty">©<script type="text/javascript">document.write(new Date().getFullYear())</script> Eli Lilly and Company, its affiliates and subsidiaries.</div>
+        <input name="hidForgotPwdUrl" type="hidden" id="hidForgotPwdUrl" value="/User/NewestForgetPassword.aspx?ReturnURL=/thirdparty&amp;Species=Thirdparty" />
+        <script>
+            // Check Browser Type
+            function isIE() {
+                var userAgent = navigator.userAgent;
+                var isIEs = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+                var isEdge = userAgent.indexOf("Trident/7.0;") > -1;
+                if (isIEs || isEdge) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            if (isIE()) {
+                var objInput = document.querySelectorAll(".text_1");
+                for (var i = 0; i < objInput.length; i++) {
+                    objInput[i].insertAdjacentHTML("beforebegin", "<label>" + objInput[i].getAttribute("placeholder") + "</label>");
+                    objInput[i].removeAttribute("placeholder");
+                    if (objInput[i].value !== "") {
+                        objInput[i].previousSibling.style.display = "none";
+                    }
+                    if (objInput[i].addEventListener) {
+                        objInput[i].previousSibling.addEventListener("click", function () {
+                            this.nextSibling.focus();
+                        });
+                        objInput[i].addEventListener("input", function () {
+                            if (this.value !== "") {
+                                this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                    else if (objInput[i].attachEvent) {
+                        objInput[i].previousSibling.attachEvent("onclick", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            _this.nextSibling.focus();
+                        });
+                        objInput[i].attachEvent("onpropertychange", function (e) {
+                            e = e || window.event;
+                            var _this = e.srcElement || e.target;
+                            if (_this.value !== "") {
+                                _this.previousSibling.style.display = "none";
+                            }
+                            else {
+                                _this.previousSibling.style.display = "block";
+                            }
+                        });
+                    }
+                };
+            }
+            function showChangePasswordModal() {
+                document.querySelector(".modal-wrap").classList.add("open");
+                document.querySelector(".modal-wrap-content").classList.add("fadeInDown10");
+                setTimeout(function () {
+                    document.querySelector(".modal-wrap-content").classList.remove("fadeInDown10");
+                }, 250);
+            }
+
+            var objBtn = document.querySelector("[data-toggle=show-modal-forgot-password]");
+            var objFrame = document.querySelector(".modal-wrap").querySelector("iframe");
+            if (objBtn.addEventListener) {
+                objBtn.addEventListener("click", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+            else if (objBtn.attachEvent) {
+                objBtn.attachEvent("onclick", function () {
+                    showChangePasswordModal();
+                    objFrame.setAttribute("src", document.getElementById("hidForgotPwdUrl").value);
+                });
+            }
+        </script>
+    </form>
+</body>
+</html>
+
+2018-03-06 15:29:41,942 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"634f07103192df2bbb05aa56b7e4a92eff43973254e34ee7811f1d74f2309c5d","UserType":"AgentAdmin"}}
+2018-03-06 15:30:19,521 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"9db55df42b8de64f3398d2e2a9b02db21fb1ca6029853e24f01d2d4670c55189","UserType":"AgentAdmin"}}
+2018-03-06 15:34:17,513 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"7972b8c2dd0cd97238ec1661ae2a558f4befb12d0286e68cb23a9008367397670190108e842ba343971b5b7e38d70a22","UserType":"VHAdmin"}}
+2018-03-06 15:34:29,941 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"5abbd6538a6b8a035ee8edcf13ee9aed8e6f654cdd6d2c864ba6f102bec5e4d5","UserType":"AgentAdmin"}}
+2018-03-06 16:35:26,835 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"f56d02afbc058629f14dd9a772c749f6212037e1cf929f999b60ee62f509cefd94e9215a44945814e07ec2ea8aa1e8af","UserType":"VHAdmin"}}
+2018-03-06 16:35:40,344 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"16790383772e6988d502ce89fd0976ef5c5529adae70926e7d9080a31fa62a35","UserType":"AgentAdmin"}}
+2018-03-06 17:06:43,259 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"c773e354aaa5039e3032591ccf1ae937333114b87c27c79387e66065744214dd13fb22f8bfa75c0c69073c2cd0822f72","UserType":"VHAdmin"}}
+2018-03-06 17:06:57,865 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"ef08bca441a078adf6bc3e04bdbba7401511d8d4101b2d3ccab69ef01d2e9d9e","UserType":"AgentAdmin"}}
+2018-03-06 17:09:31,003 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"c773e354aaa5039e3032591ccf1ae937c3e30368c7b56b58b1bfef89946ceaf08535d44189f1137cf2a828776d5e6667","UserType":"VHAdmin"}}
+2018-03-06 17:09:44,463 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"6ff1b7a67b9f4d02345ef1d2023ba173e73dd97ad83f25a64a37be5bf23f2bc0","UserType":"AgentAdmin"}}
+2018-03-06 17:11:04,316 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"8c36b83c9bf5d3bc9337b28904d8463cc3779828fb7207a0fa426ea111e71bd329a33ba5913bc05041aa654113b14b0d","UserType":"VHAdmin"}}
+2018-03-06 17:11:14,640 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"ef6956c4d8749d0e6ef36c91ef8669e0e135d6d1ee243bcfa157c9afc34aa5e6","UserType":"AgentAdmin"}}
+2018-03-06 17:12:23,226 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"8c36b83c9bf5d3bc9337b28904d8463c1bcff34cad6fa41689ede97ddde34186ec70bd420ae150b2d8adfa43f563f9e5","UserType":"VHAdmin"}}
+2018-03-06 17:12:39,050 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"b773ed504482114efc367b7308afccd69cf902de2aa50dfc554c0b7175454fac","UserType":"AgentAdmin"}}
+2018-03-06 17:13:37,686 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"8c36b83c9bf5d3bc9337b28904d8463c38659f0423213bf3949c0b55a583d22bb8994900cf3c85262b196dec049f707a","UserType":"VHAdmin"}}
+2018-03-06 17:13:55,703 - framework - INFO - {"Status":{"Code":200,"Message":"OK"},"Data":{"Token":"40f5b900b7a5218406863c79456496f7a2b6c31a1010b651fe8343decc1edc50","UserType":"AgentAdmin"}}

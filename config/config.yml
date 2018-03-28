@@ -1,0 +1,7 @@
+URL: http://192.168.0.58:1337/login.html
+log:
+    file_name: logintest.log
+    backup: 5
+    console_level: DEBUG
+    file_level: DEBUG
+    pattern: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'

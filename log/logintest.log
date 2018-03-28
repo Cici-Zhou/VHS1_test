@@ -1,0 +1,540 @@
+2018-03-08 15:47:51,423 - framework - INFO - System Manager
+2018-03-08 15:53:17,817 - framework - INFO - System Manager
+2018-03-08 16:05:18,030 - framework - INFO - System Manager
+2018-03-08 16:27:05,665 - framework - INFO - System Manager
+2018-03-08 16:45:56,875 - framework - DEBUG - GET http://192.168.0.58:1337/login.html
+2018-03-08 16:45:56,882 - framework - DEBUG - 请求成功：<Response [200]>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 16:45:56,917 - framework - DEBUG - <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 16:46:48,506 - framework - DEBUG - GET http://192.168.0.58:1337/login.html
+2018-03-08 16:46:48,532 - framework - DEBUG - 请求成功：<Response [200]>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 16:46:48,559 - framework - DEBUG - <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 16:48:00,972 - framework - DEBUG - GET http://192.168.0.58:1337/login.html
+2018-03-08 16:48:00,998 - framework - DEBUG - 请求成功：<Response [200]>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 16:48:01,025 - framework - DEBUG - <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 16:53:58,284 - framework - DEBUG - GET http://192.168.0.58:1337/login.html
+2018-03-08 16:53:58,296 - framework - DEBUG - 请求成功：<Response [200]>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 16:53:58,380 - framework - DEBUG - <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 16:54:05,303 - framework - DEBUG - GET http://192.168.0.58:1337/login.html
+2018-03-08 16:54:05,332 - framework - DEBUG - 请求成功：<Response [200]>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 16:54:05,359 - framework - DEBUG - <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <title>VHS Booking System Login</title>
+    <link href="stylesheets/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login">
+        <div class="logo">
+        </div>
+        <div class="form">
+            <p>
+                <input name="txtUserName" type="text" id="txtUserName" size="10" maxlength="25" class="username" />
+            </p>            
+            <p>
+                <input name="txtPassword" type="password" id="txtPassword" class="password" size="10" maxlength="25" />
+            </p>
+            <p>
+                <input type="submit" name="btnLogin" value="Login" id="btnLogin" class="submit" onclick="Login()"/>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="javascripts/jquery.min.js"></script>
+<script>
+    var token="";
+    var ut = "";
+    function Login() {
+        var useName=$('#txtUserName').val();
+        var password=$('#txtPassword').val();
+        var language=$('#dropLanguage').val();
+        $.post(
+            "/users/L",  
+            { uN: useName, pw: password,la:'EN' ,pf:'PC'},
+            function(data) { 
+                if(data.Data!=undefined){
+                    if(data.Data.UserType!='AgentAdmin'){
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType;
+                    }else{
+                        window.location = "http://192.168.0.58:1337/Default.html?tk="+data.Data.Token+"&ut="+data.Data.UserType+"&an="+data.Data.AgentName;
+                    }
+                    
+                }
+            } 
+        );  
+    }
+</script>
+</html>
+
+2018-03-08 17:16:16,647 - framework - DEBUG - GET http://wthrcdn.etouch.cn/weather_mini?citykey=101010100
+2018-03-08 17:16:16,653 - framework - DEBUG - 请求成功：<Response [200]>
+{"data":{"yesterday":{"date":"7日星期三","high":"高温 6℃","fx":"北风","low":"低温 -2℃","fl":"<![CDATA[<3级]]>","type":"阴"},"city":"北京","aqi":"81","forecast":[{"date":"8日星期四","high":"高温 7℃","fengli":"<![CDATA[<3级]]>","low":"低温 -4℃","fengxiang":"南风","type":"晴"},{"date":"9日星期五","high":"高温 10℃","fengli":"<![CDATA[<3级]]>","low":"低温 -2℃","fengxiang":"南风","type":"多云"},{"date":"10日星期六","high":"高温 12℃","fengli":"<![CDATA[<3级]]>","low":"低温 -2℃","fengxiang":"东南风","type":"晴"},{"date":"11日星期天","high":"高温 12℃","fengli":"<![CDATA[<3级]]>","low":"低温 0℃","fengxiang":"南风","type":"多云"},{"date":"12日星期一","high":"高温 15℃","fengli":"<![CDATA[<3级]]>","low":"低温 4℃","fengxiang":"西南风","type":"晴"}],"ganmao":"天凉，昼夜温差较大，较易发生感冒，请适当增减衣服，体质较弱的朋友请注意适当防护。","wendu":"6"},"status":1000,"desc":"OK"}
+2018-03-08 17:17:42,595 - framework - DEBUG - GET http://wthrcdn.etouch.cn/weather_mini?citykey=101010100
+2018-03-08 17:17:42,708 - framework - DEBUG - 请求成功：<Response [200]>
+{"data":{"yesterday":{"date":"7日星期三","high":"高温 6℃","fx":"北风","low":"低温 -2℃","fl":"<![CDATA[<3级]]>","type":"阴"},"city":"北京","aqi":"81","forecast":[{"date":"8日星期四","high":"高温 7℃","fengli":"<![CDATA[<3级]]>","low":"低温 -4℃","fengxiang":"南风","type":"晴"},{"date":"9日星期五","high":"高温 10℃","fengli":"<![CDATA[<3级]]>","low":"低温 -2℃","fengxiang":"南风","type":"多云"},{"date":"10日星期六","high":"高温 12℃","fengli":"<![CDATA[<3级]]>","low":"低温 -2℃","fengxiang":"东南风","type":"晴"},{"date":"11日星期天","high":"高温 12℃","fengli":"<![CDATA[<3级]]>","low":"低温 0℃","fengxiang":"南风","type":"多云"},{"date":"12日星期一","high":"高温 15℃","fengli":"<![CDATA[<3级]]>","low":"低温 4℃","fengxiang":"西南风","type":"晴"}],"ganmao":"天凉，昼夜温差较大，较易发生感冒，请适当增减衣服，体质较弱的朋友请注意适当防护。","wendu":"6"},"status":1000,"desc":"OK"}
